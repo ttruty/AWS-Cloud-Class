@@ -1,0 +1,23 @@
+{
+  "name": "react-express",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "client": "cd client &&  npm install && npm start",
+    "server": "nodemon server.js",
+    "dev": "concurrently --kill-others-on-fail \"run-p server client\"",
+    "build": "cd client && npm install && npm install --no-shrinkwrap && npm run build"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.566.0",
+    "body-parser": "^1.18.3",
+    "dotenv": "^8.2.0",
+    "express": "^4.16.4",
+    "fs": "0.0.1-security",
+    "jimp": "^0.8.5",
+    "react-router-dom": "^5.1.2"
+  },
+  "devDependencies": {
+    "concurrently": "^4.1.2"
+  }
+}
