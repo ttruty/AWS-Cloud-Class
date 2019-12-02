@@ -1,4 +1,4 @@
-# Midterm Cloud Computing Class
+# Final Cloud Computing Class
 
 ## Initial running of install script
 - Clone repo
@@ -10,7 +10,7 @@
 ### Command to run the install script
 > $ ./install.sh ami-022e07c2ebf41727f 3 t2.micro acer-kp sg-07618656 inclass-2019 subnet-dcee97e2 subnet-7f4a7f18 arn:aws:iam::338921987459:role/lambda-basic-execution
 
-- Subnet 2 is needed to elbv2 as 2 avialability zones are needed
+- Subnet 2 is needed to elbv2 as 2 availability zones are needed
 - Lamdba role arn is the role to give Lambda functions: for this the role must have Lambda access, DynamoDB access, SNS Access.
 
  - Script creates a Autoscaling group to run EC2 instances based on demand
@@ -56,12 +56,13 @@ Raw images, email, and filename, and black and white processed images are displa
 
 ![Destroy](images/destroyScript.png "Destroy")
 
-> Future Work: I would like to completly remove the use of Express API to make entire infastrucure more cloud native. This would be accomplished with AWS API gateway calls to signal Lambdas. In the install script there is the framework to begin using these. But time limitations of this project only allowed to shoehorn Lambda calls into Express API
+> Future Work: Convert the AWS CLI use to CloudFormation. Remove the use of Express API to make entire infrastructure more cloud native. This would be accomplished with AWS API gateway calls to signal Lambdas. In the install script there is the framework to begin using these. But time limitations of this project only allowed to shoehorn Lambda calls into Express API
 
 - Some key take-aways from this project
-    - Check the output of AWS because your automation script might need text output, but you changes it to JSON eariler
+
+    - Check the output of AWS because your automation script might need text output, but you changes it to JSON earlier
     
-    - The lambda GUI console on AWS is useful to bebug the lambda on the fly after creation.
+    - The lambda GUI console on AWS is useful to debug the lambda on the fly after creation.
 
     - Adding swap memory to ec2 instance helped with failing the npm build due to low memory error
 
